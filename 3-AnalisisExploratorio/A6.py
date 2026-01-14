@@ -4,15 +4,17 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("./datos_ejercicios_sesion3.csv")
 
 var1 = "app_version"
-var2 = "avg_session_min"
+var2 = "tenure_days"
 
-plt.scatter(df[var1], df[var2], alpha=0.6)
-plt.xlabel(var1)
-plt.ylabel(var2)
-plt.title(f"Scatter: {var1} vs {var2}")
+x = np.array(df[var1])
+y = np.array(df[var2])
+plt.scatter(x, y, alpha=0.7)
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("Relación")
 plt.show()
 
-#Tendencia: no lineal
-#Nivel del ruido: bajo
-#Presencia de outliers relevantes: no
-#¿Merece exploración posterior? dudas
+#Tendencia: lineal
+#Nivel del ruido: no lo se
+#Presencia de outliers relevantes: no lo se
+#¿Merece exploración posterior? tiene una forma muy rara, de 2 cuadrados. 
